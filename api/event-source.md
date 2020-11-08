@@ -2716,6 +2716,8 @@ Kubernetes core/v1.SecretKeySelector </a> </em>
 
 <td>
 
+<em>(Optional)</em>
+
 <p>
 
 APIToken refers to a K8s secret containing github api token
