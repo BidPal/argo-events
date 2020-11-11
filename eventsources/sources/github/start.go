@@ -257,9 +257,9 @@ func (router *Router) PostInactivate() error {
 	githubEventSource := router.githubEventSource
 
 	if githubEventSource.APIToken == nil {
-		logger := router.route.Logger.With(map[string]interface{}{
-			"repository": githubEventSource.Repository,
-		})
+		logger := router.route.Logger.With(
+			"repository", githubEventSource.Repository,
+		)
 
 		logger.Info("no api credential specified, skipping webhook deletion...")
 		return nil
